@@ -11,7 +11,7 @@ namespace ERP
 {
 
 
-    public partial class Site1
+    public partial class Site2
     {
 
         /// <summary>
@@ -33,31 +33,49 @@ namespace ERP
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txt_userName control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_userName;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
-        /// txt_password control.
+        /// LinkButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_password;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
 
         /// <summary>
-        /// btn_signin control.
+        /// LinkButton3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_signin;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+
+        /// <summary>
+        /// LinkButton4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+
+        /// <summary>
+        /// LinkButton5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

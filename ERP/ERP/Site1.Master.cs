@@ -13,5 +13,13 @@ namespace ERP
         {
 
         }
+
+        protected void btn_signin_Click(object sender, EventArgs e)
+        {
+            if (txt_userName.Text == "admin@admin" && txt_password.Text == "Admin")
+            {
+                Response.Redirect("main.aspx");
+            }           
+        }
     }
 }

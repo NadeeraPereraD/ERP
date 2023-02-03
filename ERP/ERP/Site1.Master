@@ -15,44 +15,46 @@
 </head>
 <body>
     <form id="form1" runat="server">
-<div>
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
         <div>
-  <form class="px-4 py-3">
-    <div class="form-group">
-      <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-    </div>
-    <div class="form-group">
-      <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-        <label class="form-check-label" for="dropdownCheck">
-          Remember me
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
-  <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">Forgot password?</a>
-</div>
-      </div>
+            <div class="modal-dialog" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h5 class="modal-title">Login</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body">
+                    <div>
+                        <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <asp:TextBox ID="txt_userName" runat="server" type="email" class="form-control" placeholder="email@example.com"></asp:TextBox>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <asp:TextBox ID="txt_password" runat="server" type="password" class="form-control" placeholder="Password"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>   
+                        <asp:Button ID="btn_signin" runat="server" class="btn btn-primary" type="submit" Text="Sign in" OnClick="btn_signin_Click" />
+                            
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                </div>
       
-    </div>
-  </div>
-</div>
+               </div>
+            </div>
+        </div>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
