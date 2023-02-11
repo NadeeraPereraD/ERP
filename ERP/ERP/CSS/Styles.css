@@ -1,0 +1,33 @@
+﻿body {
+   
+}
+
+.row{
+    
+}
+
+.image{
+    height: 100px;
+}
+
+.header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.section-left-top{
+    height:50vh;
+    background-color: aqua;
+    padding-top: 20px;
+}
+
+.form-group{
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.section-left-bottom{
+    height:50vh;
+    background-color:skyblue;
+    padding-top: 20px;
+}
