@@ -38,5 +38,10 @@ namespace ERP
         {
             Response.Redirect("inventory.aspx");
         }
+
+        protected void LinkButton6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("main.aspx");
+        }
     }
 }

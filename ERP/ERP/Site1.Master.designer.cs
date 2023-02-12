@@ -51,6 +51,15 @@ namespace ERP
         protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
+        /// cb_rememberme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cb_rememberme;
+
+        /// <summary>
         /// btn_signin control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace ERP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_signin;
+
+        /// <summary>
+        /// lbtn_forgotpw control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtn_forgotpw;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

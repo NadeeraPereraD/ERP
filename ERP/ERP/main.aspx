@@ -16,45 +16,45 @@
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail3">
+                                    <asp:TextBox ID="txt_addusermail" runat="server" type="email" class="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3">
+                                    <asp:TextBox ID="txt_adduserpassword" runat="server" type="email" class="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <fieldset class="form-group row">
                                 <legend class="col-form-label col-sm-2 float-sm-left pt-0">Privilages</legend>
                                 <div class="col-sm-10">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                        <label class="form-check-label" for="gridCheck1">
+                                        <asp:CheckBox ID="cb_addquotation" runat="server" class="form-check-input" type="checkbox"/>
+                                        <label class="form-check-label" for="cb_addquotation">
                                             Quotations
                                         </label>
                                     </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2">
-                                    <label class="form-check-label" for="gridCheck2">
+                                    <asp:CheckBox ID="cb_addinvoice" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_addinvoice">
                                         Invoices
                                     </label>
                                 </div>
                                 <div class="form-check disabled">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck3">
-                                    <label class="form-check-label" for="gridCheck3">
+                                    <asp:CheckBox ID="cb_addvendors" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_addvendors">
                                         Vendors
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck4">
-                                    <label class="form-check-label" for="gridCheck4">
+                                    <asp:CheckBox ID="cb_addcustomers" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_addcustomers">
                                         Customers
                                     </label>
                                 </div>
                                 <div class="form-check disabled">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck5">
-                                    <label class="form-check-label" for="gridCheck5">
+                                    <asp:CheckBox ID="cb_addinventory" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_addinventory">
                                         Inventory
                                     </label>
                                 </div>
@@ -63,7 +63,7 @@
                         
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Confirm</button>
+                                <asp:Button ID="btn_addconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" />
                             </div>
                         </div>
                     </form>
@@ -74,7 +74,7 @@
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail4">
+                                    <asp:TextBox ID="txt_deluseremail" runat="server" type="email" class="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             
@@ -82,32 +82,32 @@
                                 <legend class="col-form-label col-sm-2 float-sm-left pt-0">Privilages</legend>
                                 <div class="col-sm-10">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck6">
-                                        <label class="form-check-label" for="gridCheck6">
+                                        <asp:CheckBox ID="cb_delquotation" runat="server" class="form-check-input" type="checkbox"/>
+                                        <label class="form-check-label" for="cb_delquotation">
                                             Quotations
                                         </label>
                                     </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck7">
-                                    <label class="form-check-label" for="gridCheck7">
+                                    <asp:CheckBox ID="cb_delinvoice" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_delinvoice">
                                         Invoices
                                     </label>
                                 </div>
                                 <div class="form-check disabled">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck8">
-                                    <label class="form-check-label" for="gridCheck8">
+                                    <asp:CheckBox ID="cb_delvendors" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_delvendors">
                                         Vendors
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck9">
-                                    <label class="form-check-label" for="gridCheck9">
+                                    <asp:CheckBox ID="cb_delcustomers" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_delcustomers">
                                         Customers
                                     </label>
                                 </div>
                                 <div class="form-check disabled">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck10">
-                                    <label class="form-check-label" for="gridCheck10">
+                                    <asp:CheckBox ID="cb_delinventory" runat="server" class="form-check-input" type="checkbox"/>
+                                    <label class="form-check-label" for="cb_delinventory">
                                         Inventory
                                     </label>
                                 </div>
@@ -117,7 +117,8 @@
                         
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Confirm</button>
+                                <asp:Button ID="btn_delconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" />
+
                             </div>
                         </div>
                     </form>

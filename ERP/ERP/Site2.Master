@@ -28,6 +28,9 @@
 
                         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                             <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <asp:LinkButton ID="LinkButton6" runat="server" class="nav-link" OnClick="LinkButton6_Click">Dash Board<span class="sr-only">(current)</span></asp:LinkButton>
+                                </li>
                                 <li class="nav-item">
                                     <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" OnClick="LinkButton1_Click">Quotation</asp:LinkButton>
                                 </li>
