@@ -12,7 +12,6 @@
                 <div class="col-md-4">
                     <div class="section-left-top">
                         <h3 class="header"> Add Users </h3>
-                        <form>
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
@@ -22,7 +21,7 @@
                             <div class="form-group row">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                                 <div class="col-sm-10">
-                                    <asp:TextBox ID="txt_adduserpassword" runat="server" type="email" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txt_adduserpassword" runat="server" type="password" class="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <fieldset class="form-group row">
@@ -63,14 +62,12 @@
                         
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <asp:Button ID="btn_addconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" />
+                                <asp:Button ID="btn_addconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" OnClick="btn_addconfirm_Click" />
                             </div>
                         </div>
-                    </form>
                     </div>
                     <div class="section-left-bottom">
                         <h3 class="header"> Delete or Edit Users </h3>
-                        <form>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
@@ -121,13 +118,12 @@
 
                             </div>
                         </div>
-                    </form>
                     </div>
                     </div>
 
                 </div>
             </div>
 
-        </div>
+ 
 <%-- --%>
 </asp:Content>
