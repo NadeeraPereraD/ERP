@@ -16,7 +16,6 @@
 }
 
 .section-left-top{
-    height:50vh;
     background-color: aqua;
     padding-top: 20px;
 }
@@ -27,7 +26,6 @@
 }
 
 .section-left-bottom{
-    height:50vh;
     background-color:skyblue;
     padding-top: 20px;
 }

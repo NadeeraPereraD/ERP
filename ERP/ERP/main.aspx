@@ -10,7 +10,7 @@
         <div class="row">
             <div class="row col-md-12">
                 <div class="col-md-4">
-                    <div class="section-left-top">
+                    <div class="section-left-top" style="height:500px;">
                         <h3 class="header"> Add Users </h3>
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section-left-bottom">
+                    <div class="section-left-bottom" style="height:500px;">
                         <h3 class="header"> Delete or Edit Users </h3>
                             <div class="form-group row">
                                 <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>

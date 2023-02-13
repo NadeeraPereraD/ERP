@@ -23,11 +23,33 @@ namespace ERP
             {
                 using(MailMessage mail = new MailMessage())
                 {
+                    string addCheckboxes = "";
+                    if(cb_addquotation.Checked == true )
+                    {
+                        addCheckboxes = " Quotations";
+                    }
+                    if (cb_addinvoice.Checked == true)
+                    {
+                        addCheckboxes = addCheckboxes + " Invoicing";
+                    }
+                    if (cb_addvendors.Checked == true)
+                    {
+                        addCheckboxes = addCheckboxes + " Vendors";
+                    }
+                    if (cb_addcustomers.Checked == true)
+                    {
+                        addCheckboxes = addCheckboxes + " Customers";
+                    }
+                    if (cb_addinventory.Checked == true)
+                    {
+                        addCheckboxes = addCheckboxes + " Inventory";
+                    }
+
                     mail.From = new MailAddress("erp.testmails@gmail.com");
                     mail.To.Add(txt_addusermail.Text);
                     mail.Subject = "Giving privillages to the ERP";
                     string password = txt_adduserpassword.Text;
-                    mail.Body = "Your password is " + password + " & your privillages are ";
+                    mail.Body = "Your password is " + password + " & your privillages are" + addCheckboxes;
                     mail.IsBodyHtml= false;
                     
 
@@ -38,7 +60,6 @@ namespace ERP
                         //txt_deluseremail.Text = "mail@mail";
                         smtp.Send(mail);
                         //txt_adduserpassword.Text = "Mail Sent";
-
                     }
 
                 }
