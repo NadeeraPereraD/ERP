@@ -166,5 +166,96 @@ namespace ERP
             }
         }
 
+        protected void btn_delconfirm_Click(object sender, EventArgs e)
+        {
+            String quotation = "Unavailable";
+            String invoicing = "Unavailable";
+            String vendors = "Unavailable";
+            String customers = "Unavailable";
+            String inventory = "Unavailable";
+            int flag = 0;
+
+            string delCheckboxes = "";
+            if (cb_delquotation.Checked == true)
+            {
+                delCheckboxes = " Quotations";
+                quotation = "available";
+            }
+            if (cb_delinvoice.Checked == true)
+            {
+                delCheckboxes = delCheckboxes + " Invoicing";
+                invoicing = "available";
+            }
+            if (cb_delvendors.Checked == true)
+            {
+                delCheckboxes = delCheckboxes + " Vendors";
+                vendors = "available";
+            }
+            if (cb_delcustomers.Checked == true)
+            {
+                delCheckboxes = delCheckboxes + " Customers";
+                customers = "available";
+            }
+            if (cb_delinventory.Checked == true)
+            {
+                delCheckboxes = delCheckboxes + " Inventory";
+                inventory = "available";
+            }
+
+            String delEmail = txt_deluseremail.Text.ToString();
+
+            String connectionString;
+            SqlConnection cnn;
+
+            //SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            //SqlDataReader dataReader;
+            SqlCommand commandDelete;
+            SqlCommand commandUpdate;
+
+            String sqlDelete, sqlUpdate, output = "";
+
+            connectionString = @"Data Source=DESKTOP-JQPIIAD;Initial Catalog=erpsystem;Integrated Security=True";
+
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+
+            if(cb_delquotation.Checked == false && cb_delinvoice.Checked == false && cb_delvendors.Checked == false && cb_delcustomers.Checked == false && cb_delinventory.Checked == false)
+            {
+                sqlDelete = "DELETE FROM users WHERE email = '" + delEmail + "'";
+                commandDelete = new SqlCommand(sqlDelete, cnn);
+                //adapter.DeleteCommand = new SqlCommand(sqlDelete, cnn);
+                //adapter.DeleteCommand.ExecuteNonQuery();
+                commandDelete.ExecuteNonQuery();
+                txt_deluseremail.Text = "";
+            }
+
+            sqlUpdate = "Update users SET quotation = '" + quotation + "', invoicing = '" + invoicing + "', vendors = '" + vendors + "',customers = '" + customers + "', inventory = '" + inventory + "' WHERE email = '" + delEmail + "'";
+            commandUpdate = new SqlCommand(sqlUpdate,cnn);
+            commandUpdate.ExecuteNonQuery();
+
+            //sqlReader = "SELECT email FROM users";
+            //commandDelete = new SqlCommand(sqlDelete, cnn);
+            /*dataReader = commandReader.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                output = (String)dataReader.GetValue(0);
+
+                if (String.Equals(output, txt_addusermail.Text))
+                {
+                    Response.Write("This email already use as user");
+                    flag = 1;
+                }
+            }
+
+            //Response.Write(output);
+
+            dataReader.Close();*/
+
+            cnn.Close();
+
+        }
     }
 }

@@ -114,7 +114,7 @@
                         
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <asp:Button ID="btn_delconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" />
+                                <asp:Button ID="btn_delconfirm" type="submit" class="btn btn-primary" runat="server" Text="Confirm" OnClick="btn_delconfirm_Click" />
 
                             </div>
                         </div>
