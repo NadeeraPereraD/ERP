@@ -60,6 +60,10 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+        <footer class="footer">
+            <p>© Nadeera Perera</p>
+        </footer>
     </form>
 </body>
 </html>
