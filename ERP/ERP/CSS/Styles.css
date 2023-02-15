@@ -30,6 +30,16 @@
     padding-top: 20px;
 }
 
+.section-left-items {
+    border-top: 2px solid grey;
+    margin-top: 20px;
+}
+
+.head-items {
+    text-decoration: underline;
+    text-align: center;
+}
+
 .footer {
     text-align: center;
     background-color: bisque;
@@ -37,3 +47,6 @@
     font-weight: bold;
     font-size: x-large;
 }
+
+
+
