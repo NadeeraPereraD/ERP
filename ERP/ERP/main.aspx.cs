@@ -6,8 +6,10 @@ using System.Linq.Expressions;
 using System.Net.Mail;
 using System.Text;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace ERP
 {
@@ -57,6 +59,24 @@ namespace ERP
             String email = txt_addusermail.Text.ToString();
             String password = txt_adduserpassword.Text.ToString();
 
+            if (String.IsNullOrEmpty(txt_addusermail.Text))
+            {
+                MessageBox.Show("Please enter user Email Id");
+                flag = 1;
+            }
+
+            if (String.IsNullOrEmpty(txt_adduserpassword.Text))
+            {
+                MessageBox.Show("Please enter user Password");
+                flag = 1;
+            }
+
+            if(cb_addquotation.Checked == false && cb_addinvoice.Checked == false && cb_addvendors.Checked == false && cb_addcustomers.Checked == false && cb_addinventory.Checked == false)
+            {
+                MessageBox.Show("Need to add minimum one privilage");
+                flag = 1;
+            }
+
             String connectionString;
             SqlConnection cnn;
 
@@ -83,7 +103,7 @@ namespace ERP
 
                 if (String.Equals(output, txt_addusermail.Text))
                 {
-                    Response.Write("This email already use as user");
+                    MessageBox.Show("This email already use as user");
                     flag = 1;
                 }
             }
@@ -128,7 +148,9 @@ namespace ERP
 
                 //command.ExecuteNonQuery();
 
-                Response.Write("Successfully Registered");
+                MessageBox.Show("User added successfully!");
+
+                //Response.Write("Successfully Registered");
 
                 command.Dispose();
             }
@@ -204,6 +226,11 @@ namespace ERP
 
             String delEmail = txt_deluseremail.Text.ToString();
 
+            if (String.IsNullOrEmpty(delEmail))
+            {
+                MessageBox.Show("Please enter user Email Id");
+            }
+
             String connectionString;
             SqlConnection cnn;
 
@@ -229,11 +256,13 @@ namespace ERP
                 //adapter.DeleteCommand.ExecuteNonQuery();
                 commandDelete.ExecuteNonQuery();
                 txt_deluseremail.Text = "";
+                MessageBox.Show("User deleted successfully!");
             }
 
             sqlUpdate = "Update users SET quotation = '" + quotation + "', invoicing = '" + invoicing + "', vendors = '" + vendors + "',customers = '" + customers + "', inventory = '" + inventory + "' WHERE email = '" + delEmail + "'";
             commandUpdate = new SqlCommand(sqlUpdate,cnn);
             commandUpdate.ExecuteNonQuery();
+            MessageBox.Show("User privilages updated successfully!");
 
             //sqlReader = "SELECT email FROM users";
             //commandDelete = new SqlCommand(sqlDelete, cnn);

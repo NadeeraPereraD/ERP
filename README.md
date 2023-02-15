@@ -25,4 +25,4 @@ Software
 
 To do
 -----
-Until now, Login page only finished. Rest of all still need to be done.
+Until now, Login page & Dash Board only finished Connected Database and added Users. Rest of all still need to be done.
