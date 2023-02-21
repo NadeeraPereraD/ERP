@@ -20,7 +20,7 @@ Features
 Software
 --------
 * ASP.NET 2022
-* Microsoft SQL Server Management Studio 19
+* Microsoft SQL Server Management Studio 19.0.1
 * BootStrap 4.6
 
 To do
