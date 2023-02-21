@@ -15,13 +15,13 @@ namespace ERP
     {
 
         /// <summary>
-        /// txt_venid control.
+        /// lbl_venid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_venid;
+        protected global::System.Web.UI.WebControls.Label lbl_venid;
 
         /// <summary>
         /// txt_venname control.

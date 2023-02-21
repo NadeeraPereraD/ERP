@@ -15,13 +15,13 @@ namespace ERP
     {
 
         /// <summary>
-        /// txt_cusid control.
+        /// lbl_cusid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_cusid;
+        protected global::System.Web.UI.WebControls.Label lbl_cusid;
 
         /// <summary>
         /// txt_cusname control.

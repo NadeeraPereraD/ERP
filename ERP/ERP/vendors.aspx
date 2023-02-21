@@ -14,7 +14,8 @@
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Vendor ID</label>
                             <div class="col-sm-10">
-                                <asp:TextBox ID="txt_venid" type="text" class="form-control" runat="server"></asp:TextBox>
+                           <%-- <asp:TextBox ID="txt_venid" type="text" class="form-control" runat="server"></asp:TextBox> --%>
+                                <asp:Label ID="lbl_venid" runat="server" type="text" class="form-control"></asp:Label>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -131,10 +132,10 @@
 
                         <div class="row" style="justify-content: center; margin-top: 20px; margin-bottom: 20px;">
                             <div style="margin-right: 20px; margin-left: 20px;">
-                                <asp:Button ID="btn_vencreate" class="btn btn-primary" type="submit" runat="server" Text="Create" />
+                                <asp:Button ID="btn_vencreate" class="btn btn-primary" type="submit" runat="server" Text="Create" OnClick="btn_vencreate_Click" />
                             </div>
                             <div style="margin-right: 20px;">
-                                <asp:Button ID="btn_venupdate" class="btn btn-primary" type="submit" runat="server" Text="Update" />
+                                <asp:Button ID="btn_venupdate" class="btn btn-primary" type="submit" runat="server" Text="Update" OnClick="btn_venupdate_Click" />
                             </div>                                                           
                         </div>
 

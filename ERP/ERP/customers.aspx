@@ -14,7 +14,8 @@
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Customer ID</label>
                             <div class="col-sm-10">
-                                <asp:TextBox ID="txt_cusid" runat="server" type="text" class="form-control"></asp:TextBox>
+                              <%--   <asp:TextBox ID="txt_cusid" runat="server" type="text" class="form-control"></asp:TextBox> --%>
+                                <asp:Label ID="lbl_cusid" runat="server" type="text" class="form-control"></asp:Label>
                             </div>
                         </div>
                         <div class="form-group row">
