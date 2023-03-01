@@ -12,7 +12,10 @@ namespace ERP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                GVbind();
+            }
         }
 
         protected void btn_vencreate_Click(object sender, EventArgs e)
@@ -66,6 +69,8 @@ namespace ERP
 
             cnn.Close();
 
+            GVbind();
+
         }
 
         protected void btn_venupdate_Click(object sender, EventArgs e)
@@ -116,6 +121,29 @@ namespace ERP
             ///
 
             cnn.Close();
+        }
+
+
+        protected void GVbind()
+        {
+            String connectionstring;
+            SqlConnection cnn;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            connectionstring = @"Data Source=DESKTOP-JQPIIAD;Initial Catalog=erpsystem;Integrated Security=True";
+            cnn = new SqlConnection(connectionstring);
+
+            cnn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT *from vendors", cnn);
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows == true)
+            {
+                GridView1.DataSource = reader;
+                GridView1.DataBind();
+            }
         }
     }
 }
